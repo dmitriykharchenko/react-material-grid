@@ -2,6 +2,12 @@
 
 The grid from [material.angular](https://material.angularjs.org/1.0.0/layout/introduction) wrapped for `React`.
 
+```
+  npm install react-material-grid --save
+```
+It have angular-material in peer dependencies.
+
+
 
 ### Docs
 
