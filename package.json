@@ -1,14 +1,11 @@
 {
   "name": "react-material-grid",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Grid from material.angular adopted for React",
   "main": "./Grid.js",
-  "bin": {
-    "babel": "./node_modules/.bin/babel"
-  },
   "scripts": {
     "test": "mocha './src/**/*.spec.js' --compilers js:babel-core/register,css:./build/compilers/cssNoop.js",
-    "build": "rm -rf ./Grid.js && babel -o ./Grid.js ./src/Grid/index.js",
+    "build": "rm -rf ./Grid.js && ./node_modules/.bin/babel -o ./Grid.js ./src/Grid/index.js",
     "prepublish": "npm run build"
   },
   "repository": {

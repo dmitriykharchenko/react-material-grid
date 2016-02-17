@@ -102,7 +102,9 @@ Grid.propTypes = {
   ...attrSizedProptypesGenerator('hide', PropTypes.string),
   ...attrSizedProptypesGenerator('show', PropTypes.string),
 
-  layoutWrap: PropTypes.string
+  layoutWrap: PropTypes.string,
+
+  component: PropTypes.component
 }
 
 export default Grid
