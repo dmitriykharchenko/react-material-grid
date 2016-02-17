@@ -54,11 +54,11 @@ const Grid = (props) => {
     }
   }, R.keys(props)).join(' ').concat(props.className || '')
 
-  if(props.component){
+  if(props.element){
     return (
-      <props.component {...passingProps} className={ classes}>
+      <props.element {...passingProps} className={ classes}>
         { props.children }
-      </props.component>
+      </props.element>
     )
   } else {
     return (
@@ -104,7 +104,7 @@ Grid.propTypes = {
 
   layoutWrap: PropTypes.string,
 
-  component: PropTypes.component
+  element: PropTypes.element
 }
 
 export default Grid

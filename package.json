@@ -1,6 +1,6 @@
 {
   "name": "react-material-grid",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Grid from material.angular adopted for React",
   "main": "./Grid.js",
   "scripts": {

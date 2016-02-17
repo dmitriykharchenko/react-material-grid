@@ -46,11 +46,11 @@ And if you need some specific component in your grid:
 
   export default (props) => {
     return (
-      <Grid component={ section } layout="row" layoutAlign="center center">
-        <Grid component={ SomeComponent } flexSm={ 100 } flex={ 50 }>
+      <Grid element={ section } layout="row" layoutAlign="center center">
+        <Grid element={ SomeComponent } flexSm={ 100 } flex={ 50 }>
           Hello here
         <Grid>
-        <Grid  component={ OtherComponent } flexSm={ 100 } flex={ 50 }>
+        <Grid element={ OtherComponent } flexSm={ 100 } flex={ 50 }>
           Hello here too!
         <Grid>
       </Grid>
