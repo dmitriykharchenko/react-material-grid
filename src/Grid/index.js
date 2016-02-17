@@ -1,5 +1,5 @@
-import 'angular-material/modules/css/angular-material-layout.css'
-import 'angular-material/modules/css/angular-material-layouts.css'
+import './layout.css'
+import './layouts.css'
 
 import React from 'react'
 import R from 'ramda'

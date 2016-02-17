@@ -5,8 +5,6 @@ The grid from [material.angular](https://material.angularjs.org/1.0.0/layout/int
 ```
   npm install react-material-grid --save
 ```
-It have angular-material in peer dependencies.
-
 
 
 ### Docs

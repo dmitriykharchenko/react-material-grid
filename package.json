@@ -1,11 +1,13 @@
 {
   "name": "react-material-grid",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Grid from material.angular adopted for React",
   "main": "./Grid.js",
   "scripts": {
     "test": "mocha './src/**/*.spec.js' --compilers js:babel-core/register,css:./build/compilers/cssNoop.js",
-    "build": "rm -rf ./Grid.js && ./node_modules/.bin/babel -o ./Grid.js ./src/Grid/index.js",
+    "build": "npm run copyLayoutStyles && npm run copyLayoutsStyles && rm -rf ./Grid.js && ./node_modules/.bin/babel -o ./Grid.js ./src/Grid/index.js",
+    "copyLayoutStyles": "cp ./node_modules/angular-material/modules/css/angular-material-layout.css ./layout.css",
+    "copyLayoutsStyles": "cp ./node_modules/angular-material/modules/css/angular-material-layouts.css ./layouts.css",
     "prepublish": "npm run build"
   },
   "repository": {
@@ -27,10 +29,10 @@
   "homepage": "https://github.com/dmitriykharchenko/react-material-grid#readme",
   "peerDependencies": {
     "ramda": "~0.19.1",
-    "react": "0.14.x",
-    "angular-material": "~1.0.0"
+    "react": "0.14.x"
   },
   "devDependencies": {
+    "angular-material": "^1.0.5",
     "babel-cli": "^6.5.1",
     "babel-core": "^6.3.15",
     "babel-loader": "^6.1.0",
