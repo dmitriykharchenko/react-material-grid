@@ -2,7 +2,7 @@ import './layout.css'
 import './layouts.css'
 
 import React from 'react'
-import R from 'ramda'
+import { is, join, split, map, keys, reduce } from 'ramda'
 
 const { PropTypes } = React
 
@@ -14,8 +14,8 @@ const camelToDash = (string) => {
 
 const combineValueAndAttr = (attrName, attrValue) => {
   var value = attrValue
-  if(R.is(String, value)){
-    value = R.join('-', R.split(/\s+/, attrValue))
+  if(is(String, value)){
+    value = join('-', split(/\s+/, attrValue))
   }
 
   return `${ camelToDash(attrName) }-${ value }`
@@ -45,14 +45,14 @@ const Grid = (props) => {
 
   let passingProps = {}
 
-  let classes = R.map(function(attrName){
+  let classes = map(function(attrName){
     if(attrName.match(gridPropsRegexp)){
       let processor = propProcessors[attrName] || propProcessors.default
       return processor(props[attrName], attrName)
     } else {
       passingProps[attrName] = props[attrName]
     }
-  }, R.keys(props)).join(' ').concat(props.className || '')
+  }, keys(props)).join(' ').concat(props.className || '')
 
   if(props.element){
     return (
@@ -71,7 +71,7 @@ const Grid = (props) => {
 
 const attrSizedProptypesGenerator = (attrName, type) => {
   const sizes = ['Xs', 'GtXs', 'Sm', 'GtSm', 'Md', 'GtMd', 'Lg', 'GtLg', 'Xl']
-  return R.reduce((types, size) => {
+  return reduce((types, size) => {
     types[`${ attrName }${ size }`] = type
     return types
   }, {}, sizes)
