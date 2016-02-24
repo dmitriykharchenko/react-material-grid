@@ -80,7 +80,8 @@ const attrSizedProptypesGenerator = (attrName, type) => {
 Grid.propTypes = {
   flex: PropTypes.oneOfType([
       PropTypes.string,
-      PropTypes.number
+      PropTypes.number,
+      PropTypes.bool
   ]),
   ...attrSizedProptypesGenerator('flex', PropTypes.oneOfType([
       PropTypes.string,
