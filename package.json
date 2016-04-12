@@ -1,6 +1,6 @@
 {
   "name": "react-material-grid",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Grid from material.angular adopted for React",
   "main": "./Grid.js",
   "scripts": {
@@ -28,8 +28,8 @@
   },
   "homepage": "https://github.com/dmitriykharchenko/react-material-grid#readme",
   "peerDependencies": {
-    "ramda": "~0.19.1",
-    "react": "0.14.x"
+    "ramda": ">=0.19.1",
+    "react": ">=0.14.0"
   },
   "devDependencies": {
     "angular-material": "^1.0.5",
@@ -50,8 +50,8 @@
     "expect-jsx": "^2.3.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "mocha": "^2.4.5",
-    "ramda": "~0.19.1",
-    "react": "0.14.x",
+    "ramda": "^0.20.x",
+    "react": "15.x.x",
     "react-addons-test-utils": "^0.14.7",
     "style-loader": "^0.13.0"
   }
